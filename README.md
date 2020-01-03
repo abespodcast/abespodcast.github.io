@@ -29,6 +29,10 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
 
 - Double click on `Package.swift` to open it in XCode.
 - Open `Sources/Abespodcast/main.swift`.
+- After making changes do `Run / Cmd+R`.
+- Reload `localhost:8000` manually.
+  - ( make sure `publish run` is running in terminal )
+- It should load with the changes in a second or so.
 
 ## Deploying
 
