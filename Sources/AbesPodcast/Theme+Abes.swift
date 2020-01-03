@@ -69,12 +69,13 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
                 .wrapper(
+                    .h2(.text(context.site.name)),
                     .article(
                         .div(
                             .class("content"),
                             .contentBody(item.body)
                         ),
-                        .span("Tagged with: "),
+                        .span("Etiket: "),
                         .tagList(for: item, on: context.site)
                     )
                 ),
@@ -106,7 +107,7 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
-                    .h1("Browse all tags"),
+                    .h1("Tüm Etiketlere Bak"),
                     .ul(
                         .class("all-tags"),
                         .forEach(page.tags.sorted()) { tag in
@@ -133,13 +134,14 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
+                    .h2(.text(context.site.name)),
                     .h1(
-                        "Tagged with ",
+                        "Etiket: ",
                         .span(.class("tag"), .text(page.tag.string))
                     ),
                     .a(
                         .class("browse-all"),
-                        .text("Browse all tags"),
+                        .text("Tüm Etiketlere Bak"),
                         .href(context.site.tagListPath)
                     ),
                     .itemList(
