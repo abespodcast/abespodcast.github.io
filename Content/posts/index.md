@@ -1,1 +1,1 @@
-# My posts
+# Yazılar

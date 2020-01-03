@@ -15,14 +15,14 @@ struct AbesPodcast: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://abespodcast.github.io")!
-    var name = "AbesPodcast"
-    var description = "A description of AbesPodcast"
-    var language: Language { .english }
+    var name = "Abes Podcast"
+    var description = "Mert, Can ve Cansın kafalarına estikçe, kafalarından geçenleri birbirlerine anlatıyorlar bazen de açıklıyorlar."
+    var language: Language { .turkish }
     var imagePath: Path? { nil }
 }
 
 try AbesPodcast().publish(
-  withTheme: .foundation,
+  withTheme: .abes,
   additionalSteps: [
     .deploy(using:.gitHub("abespodcast/abespodcast.github.io"))
 ])
