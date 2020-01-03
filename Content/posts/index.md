@@ -1,1 +1,1 @@
-# Yazılar
+# Tüm Yazılar
