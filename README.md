@@ -34,6 +34,14 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
   - ( make sure `publish run` is running in terminal )
 - It should load with the changes in a second or so.
 
+## Working on VSCode
+
+- Open the folder in VSCode
+- Open the integrated terminal
+- `swift build`
+- `swift run`
+- [SwiftFormat Plugin](https://marketplace.visualstudio.com/items?itemName=vknabel.vscode-swiftformat) is recommended
+
 ## Deploying
 
 - `publish deploy`

@@ -1,14 +1,14 @@
 /**
-*  Publish
-*  Copyright (c) Eralp Karaduman 2020
-*  MIT license, see LICENSE file for details
-*/
+ *  Publish
+ *  Copyright (c) Eralp Karaduman 2020
+ *  MIT license, see LICENSE file for details
+ */
 
-import Publish
 import Plot
+import Publish
 
 public extension Theme {
-static var abes: Self {
+    static var abes: Self {
         Theme(
             htmlFactory: AbesHTMLFactory(),
             resourcePaths: ["Resources/AbesTheme/styles.css"]
@@ -17,8 +17,10 @@ static var abes: Self {
 }
 
 private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
-    func makeIndexHTML(for index: Index,
-                       context: PublishingContext<Site>) throws -> HTML {
+    func makeIndexHTML(
+        for index: Index,
+        context: PublishingContext<Site>
+    ) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: index, on: context.site),
@@ -44,8 +46,10 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makeSectionHTML(for section: Section<Site>,
-                         context: PublishingContext<Site>) throws -> HTML {
+    func makeSectionHTML(
+        for section: Section<Site>,
+        context: PublishingContext<Site>
+    ) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: section, on: context.site),
@@ -60,8 +64,10 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makeItemHTML(for item: Item<Site>,
-                      context: PublishingContext<Site>) throws -> HTML {
+    func makeItemHTML(
+        for item: Item<Site>,
+        context: PublishingContext<Site>
+    ) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: item, on: context.site),
@@ -84,23 +90,26 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makePageHTML(for page: Page,
-                      context: PublishingContext<Site>) throws -> HTML {
+    func makePageHTML(
+        for page: Page,
+        context: PublishingContext<Site>
+    ) throws -> HTML {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
-
                 ),
                 .footer(for: context.site)
             )
         )
     }
 
-    func makeTagListHTML(for page: TagListPage,
-                         context: PublishingContext<Site>) throws -> HTML? {
+    func makeTagListHTML(
+        for page: TagListPage,
+        context: PublishingContext<Site>
+    ) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
@@ -126,8 +135,10 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
         )
     }
 
-    func makeTagDetailsHTML(for page: TagDetailsPage,
-                            context: PublishingContext<Site>) throws -> HTML? {
+    func makeTagDetailsHTML(
+        for page: TagDetailsPage,
+        context: PublishingContext<Site>
+    ) throws -> HTML? {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
@@ -168,12 +179,13 @@ private extension Node where Context == HTML.BodyContext {
         for context: PublishingContext<T>,
         selectedSection: T.SectionID?
     ) -> Node {
-      let sectionIDs = T.SectionID.allCases
+        let sectionIDs = T.SectionID.allCases
 
-      return .header(
+        return .header(
             .wrapper(
-              .a(.href("/"), .div(.class("header-background"))),
-                .if(sectionIDs.count > 1,
+                .a(.href("/"), .div(.class("header-background"))),
+                .if(
+                    sectionIDs.count > 1,
                     .nav(
                         .ul(.forEach(sectionIDs) { section in
                             .li(.a(
@@ -213,7 +225,7 @@ private extension Node where Context == HTML.BodyContext {
         })
     }
 
-    static func footer<T: Website>(for site: T) -> Node {
+    static func footer<T: Website>(for _: T) -> Node {
         return .footer(
             .p(
                 .text("Open Source at "),

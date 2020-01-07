@@ -3,17 +3,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "AbesPodcast",
-    products: [
-        .executable(name: "AbesPodcast", targets: ["AbesPodcast"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", from: "0.2.0")
-    ],
-    targets: [
-        .target(
-            name: "AbesPodcast",
-            dependencies: ["Publish"]
-        )
-    ]
+  name: "AbesPodcast",
+  products: [
+    .executable(name: "AbesPodcast", targets: ["AbesPodcast"]),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.41.2"),
+    .package(url: "https://github.com/johnsundell/publish.git", from: "0.2.0"),
+  ],
+  targets: [
+    .target(
+      name: "AbesPodcast",
+      dependencies: ["Publish"]
+    ),
+  ]
 )
