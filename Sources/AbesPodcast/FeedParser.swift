@@ -1,7 +1,6 @@
 import Foundation
 
 class FeedParser: NSObject, XMLParserDelegate {
-  var completionHandler: (([FeedItem]) -> Void)?
   var parser: XMLParser!
 
   var items:[FeedItem]! = Array()
@@ -21,9 +20,9 @@ class FeedParser: NSObject, XMLParserDelegate {
     parser.delegate = self
   }
 
-  func parse(completionHandler: @escaping ([FeedItem]) -> Void) {
-    self.completionHandler = completionHandler
+  func parse() -> [FeedItem] {
     parser.parse()
+    return items
   }
 
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
@@ -72,7 +71,5 @@ class FeedParser: NSObject, XMLParserDelegate {
     }
   }
 
-  func parserDidEndDocument(_ parser: XMLParser) {
-    completionHandler?(items)
-  }
+  func parserDidEndDocument(_ parser: XMLParser) { }
 }
