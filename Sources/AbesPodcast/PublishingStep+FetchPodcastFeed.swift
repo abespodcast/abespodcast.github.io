@@ -23,14 +23,5 @@ func parseFeedSync(data: Data) -> [FeedItem] {
 }
 
 func fetchUrlSync(url: URL) -> Data {
-  let semaphore = DispatchSemaphore(value: 0)
-  var result: Data? = nil
-  let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-    // TODO: Handle error
-    result = data!
-    semaphore.signal()
-  }
-  task.resume()
-  semaphore.wait()
-  return result!
+  return try! Data(contentsOf: url)
 }
