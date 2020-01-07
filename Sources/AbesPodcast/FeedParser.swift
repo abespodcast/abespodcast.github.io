@@ -1,10 +1,10 @@
 import Foundation
 
 class FeedParser: NSObject, XMLParserDelegate {
-  var completionHandler: (([RssItem]) -> Void)?
+  var completionHandler: (([FeedItem]) -> Void)?
   var parser: XMLParser!
 
-  var items:[RssItem]! = Array()
+  var items:[FeedItem]! = Array()
   var itemDictionary: Dictionary<String, String>! = Dictionary<String, String>()
 
   var itemLink: String!
@@ -21,7 +21,7 @@ class FeedParser: NSObject, XMLParserDelegate {
     parser.delegate = self
   }
 
-  func parse(completionHandler: @escaping ([RssItem]) -> Void) {
+  func parse(completionHandler: @escaping ([FeedItem]) -> Void) {
     self.completionHandler = completionHandler
     parser.parse()
   }
@@ -66,7 +66,7 @@ class FeedParser: NSObject, XMLParserDelegate {
     case "description" where !skip:
       itemDictionary[elementName] = itemDescription
     case "item" where !skip:
-      items.append(RssItem(withDictionary: itemDictionary))
+      items.append(FeedItem(withDictionary: itemDictionary))
     default:
       break
     }
