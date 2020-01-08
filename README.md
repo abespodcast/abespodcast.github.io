@@ -34,7 +34,7 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
   - ( make sure `publish run` is running in terminal )
 - It should load with the changes in a second or so.
 
-## Working on VSCode
+## Working with VSCode
 
 - Open the folder in VSCode
 - Open the integrated terminal
