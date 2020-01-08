@@ -11,9 +11,9 @@ Bulut bilişim çağında kerkesin sitesi oluyor diye duyduk, eksik kalmadik.
 
 Sitemiz açık kaymaklıdır, Kaymağı da buradadır: [GitHub](https://github.com/abespodcast/abespodcast.github.io)
 
-Gelecekte sitemizden direkt olarak da bölümleri dinleyebileceksiniz. [Eralp](https://twitter.com/eralpkaraduman) siteyi bir ara bitirecektir. Kendisi eğlenmek için site yapan birisidir, nasıl biri olduğunu az çok tahmin edebilirsiniz.
+Siteyi [Eralp](https://twitter.com/eralpkaraduman) diye biri yaptı. Kendisi eğlenmek için site yapan birisi, nasıl biri olduğunu az çok tahmin edebilirsiniz.
 
-![](/images/square-cover.jpg)
+![cover](/images/square-cover.jpg)
 
 ## Podcastimizi dinleyiniz
 
