@@ -21,8 +21,8 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
 ## Build
 
 - Clone this repository.
-- `cd` into abespodcast.github.io
-- `publish run`
+- $`cd` into abespodcast.github.io
+- $`publish run`
   - It will compile, then start the local development server at `localhost:8000`.
 
 ## Making Changes
@@ -38,10 +38,10 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
 
 - Open the folder in VSCode
 - Open the integrated terminal
-- `swift build`
-- `swift run`
+- $`swift build`
+- $`swift run`
 - [SwiftFormat Plugin](https://marketplace.visualstudio.com/items?itemName=vknabel.vscode-swiftformat) is recommended
 
 ## Deploying
 
-- `publish deploy`
+- $`publish deploy`
