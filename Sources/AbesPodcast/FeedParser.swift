@@ -3,8 +3,8 @@ import Foundation
 class FeedParser: NSObject, XMLParserDelegate {
   var parser: XMLParser!
 
-  var items:[FeedItem]! = Array()
-  var itemDictionary: Dictionary<String, String>! = Dictionary<String, String>()
+  var items: [FeedItem]! = Array()
+  var itemDictionary: [String: String]! = [String: String]()
 
   var currentElement = ""
 
@@ -30,7 +30,7 @@ class FeedParser: NSObject, XMLParserDelegate {
     return items
   }
 
-  func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+  func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
     switch elementName {
     case "item":
       skip = false
@@ -90,5 +90,5 @@ class FeedParser: NSObject, XMLParserDelegate {
     }
   }
 
-  func parserDidEndDocument(_ parser: XMLParser) { }
+  func parserDidEndDocument(_ parser: XMLParser) {}
 }

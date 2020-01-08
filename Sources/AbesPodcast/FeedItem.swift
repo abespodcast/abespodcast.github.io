@@ -7,7 +7,7 @@ struct FeedItem {
   let episode: String
   let publishDate: Date
   let imageUrl: URL
-  init(withDictionary dictionary: Dictionary<String, String>) {
+  init(withDictionary dictionary: [String: String]) {
     title = dictionary["title"]!
     link = dictionary["link"] ?? ""
     description = dictionary["description"]!
