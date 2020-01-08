@@ -1,9 +1,3 @@
-/**
- *  Publish
- *  Copyright (c) Eralp Karaduman 2020
- *  MIT license, see LICENSE file for details
- */
-
 import Plot
 import Publish
 

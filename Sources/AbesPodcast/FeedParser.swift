@@ -9,6 +9,8 @@ class FeedParser: NSObject, XMLParserDelegate {
   var itemLink: String!
   var itemTitle: String!
   var itemDescription: String!
+  var itemEpisode: String!
+  var itemPubDate: String!
   var currentElement = ""
   var skip = true
 
@@ -31,16 +33,18 @@ class FeedParser: NSObject, XMLParserDelegate {
       skip = false
     case "title" where !skip:
       itemTitle = String()
-      currentElement = elementName
     case "link" where !skip:
       itemLink = String()
-      currentElement = elementName
     case "description" where !skip:
       itemDescription = String()
-      currentElement = elementName
+    case "itunes:episode" where !skip:
+      itemEpisode = String()
+    case "pubDate" where !skip:
+      itemPubDate = String()
     default:
       break
     }
+    currentElement = elementName
   }
 
   func parser(_ parser: XMLParser, foundCharacters string: String) {
@@ -51,6 +55,10 @@ class FeedParser: NSObject, XMLParserDelegate {
       itemLink += string
     case "description" where !skip:
       itemDescription += string
+    case "itunes:episode" where !skip:
+      itemEpisode += string
+    case "pubDate" where !skip:
+      itemPubDate += string
     default:
       break
     }
@@ -64,6 +72,10 @@ class FeedParser: NSObject, XMLParserDelegate {
       itemDictionary[elementName] = itemLink
     case "description" where !skip:
       itemDictionary[elementName] = itemDescription
+    case "itunes:episode" where !skip:
+      itemDictionary[elementName] = itemEpisode
+    case "pubDate" where !skip:
+      itemDictionary[elementName] = itemPubDate
     case "item" where !skip:
       items.append(FeedItem(withDictionary: itemDictionary))
     default:

@@ -6,6 +6,7 @@ struct AbesPodcast: Website {
   enum SectionID: String, WebsiteSectionID {
     // Add the sections that you want your website to contain here:
     case posts
+    case episodes
   }
 
   struct ItemMetadata: WebsiteItemMetadata {
@@ -24,6 +25,6 @@ try AbesPodcast().publish(
   withTheme: .abes,
   additionalSteps: [
     .deploy(using: .gitHub("abespodcast/abespodcast.github.io")),
-    .fetchPodcastFeed(url: "https://anchor.fm/s/b70e800/podcast/rss")
+    .addPodcastEpisodePages(url: "https://anchor.fm/s/b70e800/podcast/rss"),
   ]
 )
