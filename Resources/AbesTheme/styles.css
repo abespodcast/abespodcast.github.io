@@ -89,6 +89,7 @@ a {
 .item-list > li {
     display: block;
     padding: 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: #eee;
 }
