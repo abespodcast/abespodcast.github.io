@@ -32,6 +32,11 @@ extension PublishingStep where Site == AbesPodcast {
                   .src(item.link.replacingOccurrences(of: "/episodes/", with: "/embed/episodes/"))
                 ),
                 .br(),
+                .img(
+                  .src(item.imageUrl),
+                  .attribute(named: "width", value: "400px")
+                ),
+                .br(),
                 .a(.href(item.link), .img(.src("/images/anchor.png")))
               )),
               date: item.publishDate,

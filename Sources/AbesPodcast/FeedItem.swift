@@ -6,11 +6,14 @@ struct FeedItem {
   let description: String
   let episode: String
   let publishDate: Date
+  let imageUrl: URL
   init(withDictionary dictionary: Dictionary<String, String>) {
     title = dictionary["title"]!
     link = dictionary["link"] ?? ""
     description = dictionary["description"]!
     episode = dictionary["itunes:episode"]!
+    imageUrl = URL(string: dictionary["itunes:image"]!)!
+
     let formatter = DateFormatter()
     formatter.dateFormat = "EEE, d MMM yyyy HH:mm:ss z"
     let pubDate = dictionary["pubDate"]!

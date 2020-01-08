@@ -6,12 +6,15 @@ class FeedParser: NSObject, XMLParserDelegate {
   var items:[FeedItem]! = Array()
   var itemDictionary: Dictionary<String, String>! = Dictionary<String, String>()
 
+  var currentElement = ""
+
   var itemLink: String!
   var itemTitle: String!
   var itemDescription: String!
   var itemEpisode: String!
   var itemPubDate: String!
-  var currentElement = ""
+  var itemImage: String!
+
   var skip = true
 
   var foundCharacters = ""
@@ -41,6 +44,8 @@ class FeedParser: NSObject, XMLParserDelegate {
       itemEpisode = String()
     case "pubDate" where !skip:
       itemPubDate = String()
+    case "itunes:image" where !skip:
+      itemImage = attributeDict["href"]
     default:
       break
     }
@@ -76,6 +81,8 @@ class FeedParser: NSObject, XMLParserDelegate {
       itemDictionary[elementName] = itemEpisode
     case "pubDate" where !skip:
       itemDictionary[elementName] = itemPubDate
+    case "itunes:image" where !skip:
+      itemDictionary[elementName] = itemImage
     case "item" where !skip:
       items.append(FeedItem(withDictionary: itemDictionary))
     default:
