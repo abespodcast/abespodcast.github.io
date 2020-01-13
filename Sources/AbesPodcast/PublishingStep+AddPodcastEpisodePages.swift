@@ -32,7 +32,7 @@ extension PublishingStep where Site == AbesPodcast {
             metadata: AbesPodcast.ItemMetadata(),
             tags: ["episode"],
             content: Content(
-              title: formatter.string(from: pubDate),
+              title: title,
               description: description,
               body: Content.Body(node: .div(
                 .h1(.text(title)),
