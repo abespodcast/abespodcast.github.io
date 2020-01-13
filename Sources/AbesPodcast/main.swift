@@ -24,6 +24,6 @@ try AbesPodcast().publish(
   withTheme: .abes,
   additionalSteps: [
     .deploy(using: .gitHub("abespodcast/abespodcast.github.io")),
-    .addPodcastEpisodePages(url: "https://anchor.fm/s/b70e800/podcast/rss"),
+    .addPodcastEpisodePages(url: "https://anchor.fm/s/b70e800/podcast/rss", locale: "tr_TR"),
   ]
 )
