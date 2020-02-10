@@ -1,5 +1,6 @@
 import Plot
 import Publish
+import Foundation
 
 public extension Theme {
   static var abes: Self {
@@ -238,7 +239,26 @@ private extension Node where Context == HTML.BodyContext {
       .p(.a(
         .text("RSS feed"),
         .href("/feed.rss")
-      ))
+      )),
+      .script(.src(URL(string: "https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js")!)),
+      .script(.src(URL(string: "https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js")!)),
+      .script("""
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyB9FtUufaUqCIp27Mb7aPF42ovAbggyrZE",
+          authDomain: "abespodcast-b5308.firebaseapp.com",
+          databaseURL: "https://abespodcast-b5308.firebaseio.com",
+          projectId: "abespodcast-b5308",
+          storageBucket: "abespodcast-b5308.appspot.com",
+          messagingSenderId: "758058129881",
+          appId: "1:758058129881:web:3137bf59793662d431a1c8",
+          measurementId: "G-WHES6K4K9M"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      """)
     )
   }
 }
+
