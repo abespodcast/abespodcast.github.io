@@ -2,14 +2,14 @@
 
 Source of [abespodcast.github.io](https://abespodcast.github.io)
 
-Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://swift.org) static site generator.
+Made with [Publish](https://github.com/johnsundell/publish) the [Swift](https://swift.org) static site generator.
 
 # Running Locally (Mac)
 
 ## Install Dependencies
 
-- XCode
-- Open terminal and type `swift` then run.
+- Xcode
+- Open `Terminal` and type `swift` then run.
   - It should enter swift REPL.
   - If it doesn't, try installing xcode command line utilities.
   - type `:quit` to exit swift REPL.
@@ -27,7 +27,7 @@ Made with [Publish](https://github.com/johnsundell/publish) the [swift](https://
 
 ## Making Changes
 
-- Double click on `Package.swift` to open it in XCode.
+- Double click on `Package.swift` to open it in Xcode.
 - Open `Sources/Abespodcast/main.swift`.
 - After making changes do `Run / Cmd+R`.
 - Reload `localhost:8000` manually.
