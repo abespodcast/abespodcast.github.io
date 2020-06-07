@@ -1,5 +1,8 @@
 import FeedKit
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 import Plot
 import Publish
 

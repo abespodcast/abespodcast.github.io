@@ -1,6 +1,9 @@
 import Plot
 import Publish
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 public extension Theme {
   static var abes: Self {
