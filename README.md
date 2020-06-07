@@ -44,4 +44,9 @@ Made with [Publish](https://github.com/johnsundell/publish) the [Swift](https://
 
 ## Deploying
 
+Run command;
+
 - $`publish deploy`
+
+Or, make a change and commit to `source` branch (on github web ui for convenience). Github action will take care of the deployment.
+TODO: Setup a web hook trigger for deployment when podcast feed is updated 
