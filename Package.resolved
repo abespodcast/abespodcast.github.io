@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/johnsundell/publish.git",
         "state": {
           "branch": null,
-          "revision": "c1bde99ec71f992cbe7dec6310759b14258567a8",
-          "version": "0.3.0"
+          "revision": "3318e23beee3545c49e395991f869911733b45cf",
+          "version": "0.6.0"
         }
       },
       {
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/johnsundell/sweep.git",
         "state": {
           "branch": null,
-          "revision": "d357d12c9558e51f037bf2f956d5cf6c73dc0d44",
-          "version": "0.3.0"
+          "revision": "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
+          "version": "0.4.0"
         }
       },
       {
