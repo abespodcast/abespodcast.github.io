@@ -145,6 +145,17 @@ footer {
     color: #8a8a8a;
 }
 
+.listening-source {
+    
+}
+
+.listening-source-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
