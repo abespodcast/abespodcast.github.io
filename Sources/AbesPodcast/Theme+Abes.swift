@@ -70,7 +70,7 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
                         ),
                         .a(
                             .class("listening-source"),
-                            .href("https://open.spotify.com/show/4XgrpsMAsYgrdtph48HN3S"),
+                            .href("https://anchor.fm/s/b70e800/podcast/rss"),
                             .img(.src(Path("/images/rss.png")),.class("listening-source-icon"))
                         )
                     ),
@@ -87,7 +87,7 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
             )
         )
     }
-    
+
     func makeSectionHTML(
         for section: Section<Site>,
         context: PublishingContext<Site>
@@ -105,7 +105,7 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
             )
         )
     }
-    
+
     func makeItemHTML(
         for item: Item<Site>,
         context: PublishingContext<Site>
