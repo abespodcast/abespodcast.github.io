@@ -23,10 +23,10 @@ jobs:
     - name: Generate Site
       run: publish generate
 
-	- name: Create CNAME
-	  run: |
-	    cd ./Output
-	    echo "www.abespodcast.com" > CNAME
+    - name: Create CNAME
+      run: |
+        cd ./Output
+        echo "www.abespodcast.com" > CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
