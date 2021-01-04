@@ -12,7 +12,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.41.2"),
-    .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.6.0"),
+    .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.7.0"),
     .package(url: "https://github.com/nmdias/FeedKit.git", from: "9.0.0")
   ],
   targets: [

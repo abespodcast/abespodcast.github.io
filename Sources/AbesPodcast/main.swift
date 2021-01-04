@@ -16,7 +16,7 @@ struct AbesPodcast: Website {
   }
 
   // Update these properties to configure your website:
-  var url = URL(string: "https://abespodcast.github.io")!
+  var url = URL(string: "https://www.abespodcast.com")!
   var name = "Abes Podcast"
   var description = "Mert, Can ve Cansın kafalarına estikçe, kafalarından geçenleri birbirlerine anlatıyorlar bazen de açıklıyorlar."
   var language: Language { .turkish }

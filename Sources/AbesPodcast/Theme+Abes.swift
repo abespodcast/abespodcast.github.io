@@ -62,7 +62,11 @@ private struct AbesHTMLFactory<Site: Website>: HTMLFactory {
                             .href("https://open.spotify.com/show/4XgrpsMAsYgrdtph48HN3S"),
                             .img(.src(Path("/images/spotify.png")),.class("listening-source-icon"))
                         ),
-                        
+						.a(
+							.class("listening-source"),
+							.href("https://www.youtube.com/channel/UCWcCXDVrCjKTL5aBrjflVSg"),
+							.img(.src(Path("/images/youtube.png")),.class("listening-source-icon"))
+						),
                         .a(
                             .class("listening-source"),
                             .href("https://overcast.fm/itunes1467674555/abes"),

@@ -22,6 +22,7 @@ Buralardan dinlenebiliyor;
 [Overcast](https://overcast.fm/itunes1467674555/abes),
 [Anchor](https://anchor.fm/abes/),
 [Apple Podcasts](https://podcasts.apple.com/us/podcast/abes/id1467674555?uo=4),
+[Youtube](https://www.youtube.com/channel/UCWcCXDVrCjKTL5aBrjflVSg),
 [Google Podcasts](https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9iNzBlODAwL3BvZGNhc3QvcnNz),
 [Spotify](https://open.spotify.com/show/4XgrpsMAsYgrdtph48HN3S),
 [RSS](https://anchor.fm/s/b70e800/podcast/rss)
