@@ -21,8 +21,10 @@ jobs:
     - name: Cache
       uses: actions/cache@v3
       with:
-        path: .build
-        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        path: |
+          .build
+          .publish
+        key: ${{ runner.os }}-spm-${{ hashFiles('./Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-spm-
             
