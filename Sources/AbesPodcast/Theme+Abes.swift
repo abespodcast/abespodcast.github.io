@@ -256,7 +256,14 @@ private extension Node where Context == HTML.BodyContext {
                         .text(item.title)
                         )),
                     .tagList(for: item, on: site),
-                    .p(.text(item.description))
+                    .p(.text(String(
+                        item.description.replacingOccurrences(
+                            of: "<[^>]+>", 
+                            with: "", 
+                            options: .regularExpression, 
+                            range: nil
+                        ).prefix(200) + "..."
+                        )))
                     ))
             }
         )

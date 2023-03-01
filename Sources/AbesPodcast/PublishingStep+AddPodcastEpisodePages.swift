@@ -40,7 +40,7 @@ extension PublishingStep where Site == AbesPodcast {
               body: Content.Body(node: .div(
                 .h1(.text(title)),
                 .p(.text(formatter.string(from: pubDate))),
-                .p(.text(description)),
+                .p(.raw(description)),
                 .iframe(
                   .attribute(named: "width", value: "400px"),
                   .attribute(named: "height", value: "102px"),

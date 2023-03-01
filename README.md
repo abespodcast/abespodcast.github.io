@@ -14,16 +14,19 @@ Made with [Publish](https://github.com/johnsundell/publish) the [Swift](https://
   - If it doesn't, try installing xcode command line utilities.
   - type `:quit` to exit swift REPL.
 - Publish.
-  - \$ `git clone git@github.com:JohnSundell/Publish.git`
-  - \$ `cd Publish`
+  - \$ `git clone git@github.com:JohnSundell/Publish.git ~/Publish`
+  - \$ `cd ~/Publish`
   - \$ `make`
 
-## Build
+## Run locally
 
 - Clone this repository.
 - $`cd` into abespodcast.github.io
 - $`publish run`
   - It will compile, then start the local development server at `localhost:8000`.
+
+## Build
+- $`swift run`
 
 ## Making Changes
 
@@ -31,7 +34,7 @@ Made with [Publish](https://github.com/johnsundell/publish) the [Swift](https://
 - Open `Sources/Abespodcast/main.swift`.
 - After making changes do `Run / Cmd+R`.
 - Reload `localhost:8000` manually.
-  - ( make sure `publish run` is running in terminal )
+  - ( make sure `publsih run` is running in terminal )
 - It should load with the changes in a second or so.
 
 ## Working with VSCode
@@ -50,3 +53,7 @@ Run command;
 
 Or, make a change and commit to `source` branch (on github web ui for convenience). Github action will take care of the deployment.
 TODO: Setup a web hook trigger for deployment when podcast feed is updated 
+
+## Troubleshooting
+- Install xcode command line tools: `xcode-select --install`.
+- Fix if xcode command line tools are installed to wrong path: sudo `xcode-select --switch /Applications/Xcode.app/Contents/Developer`
