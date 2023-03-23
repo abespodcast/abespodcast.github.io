@@ -1,1 +1,1 @@
-debloy
+deploy
